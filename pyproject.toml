@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcpshake"
+version = "0.1.0"
+description = "Property-based tests for MCP servers: call every tool with schema-generated arguments and catch crashes, hangs, stdout noise and outputSchema lies"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Celalettin Durğaç"}]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["mcp", "model-context-protocol", "fuzzing", "property-based-testing", "json-schema", "ai-agents", "testing"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Testing",
+  "Environment :: Console",
+]
+
+[project.urls]
+Homepage = "https://github.com/celaldrg/mcpshake"
+Issues = "https://github.com/celaldrg/mcpshake/issues"
+
+[project.scripts]
+mcpshake = "mcpshake.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

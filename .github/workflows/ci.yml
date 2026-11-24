@@ -1,0 +1,32 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        python: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+        include:
+          - os: macos-latest
+            python: "3.13"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e . pytest
+      - run: pytest -q
+      - name: The fixed example server passes
+        run: mcpshake --timeout 2 --github -- python examples/notes_server_fixed.py
+      - name: The buggy example server fails
+        run: |
+          if mcpshake --timeout 1 -q -- python examples/notes_server.py; then
+            echo "expected findings" && exit 1
+          fi
