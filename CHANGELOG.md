@@ -16,4 +16,4 @@ First release.
 - Skips `destructiveHint: true` tools unless `--include-destructive` is given, and
   tools that require task augmentation.
 - `--seed` for reproducible runs, `--json`, `--github`, `--fail-on`, `--tools`/`--skip`.
-- Zero runtime dependencies, Python 3.9+.
+- Zero runtime dependencies, Python 3.10+.

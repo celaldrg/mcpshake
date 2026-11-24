@@ -8,7 +8,7 @@
   <a href="https://github.com/celaldrg/mcpshake/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/celaldrg/mcpshake/actions/workflows/ci.yml/badge.svg"></a>
   <a href="https://github.com/celaldrg/mcpshake/releases"><img alt="Release" src="https://img.shields.io/github/v/release/celaldrg/mcpshake?sort=semver"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
-  <img alt="Python 3.9+" src="https://img.shields.io/badge/python-3.9%2B-3776ab">
+  <img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10%2B-3776ab">
   <img alt="Dependencies: 0" src="https://img.shields.io/badge/dependencies-0-brightgreen">
 </p>
 
@@ -59,7 +59,7 @@ Fix the bugs and the same run comes back clean:
 
 ## Install
 
-Python 3.9 or newer, no dependencies.
+Python 3.10 or newer, no dependencies.
 
 ```sh
 # from the v0.1.0 release
